@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #FFFFFF;
+  color: #111;
+  line-height: 1.4;
+}
+
+.navigation {
+  background: #0057A7;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+.navigation__item {
+  cursor: pointer;
+  font-weight: 600;
+  color: #FFFFFF;
+  transition: color 0.3s;
+}
+.navigation__item:hover {
+  color: #FFD60A;
+}
+
+.logo {
+  width: 5vw;
+  height: 10vh;
+}
+
+.carousel {
+  position: relative;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+.carousel__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #FF6B1A;
+}
+.carousel__list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  list-style: none;
+  padding: 1rem 0;
+}
+.carousel__list::-webkit-scrollbar {
+  display: none;
+}
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0057A7;
+  border: none;
+  color: #FFFFFF;
+  font-size: 2rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+.carousel__btn:hover {
+  background: #FF6B1A;
+}
+.carousel__btn--prev {
+  left: 0.5rem;
+}
+.carousel__btn--next {
+  right: 0.5rem;
+}
+
+.movie-card {
+  flex: 0 0 auto;
+  width: 180px;
+  background: #FFFFFF;
+  border-radius: 0.75rem;
+  border: 2px solid #0057A7;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.movie-card:hover {
+  transform: scale(1.05);
+  border-color: #FF6B1A;
+}
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+.movie-card__title {
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #111;
+}
+.movie-card__btn {
+  display: block;
+  margin: 0.5rem auto 1rem;
+  padding: 0.4rem 1rem;
+  background: #FF6B1A;
+  border: none;
+  border-radius: 0.4rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.movie-card__btn:hover {
+  background: #FFD60A;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    width: 140px;
+  }
+}
+@media (max-width: 480px) {
+  .movie-card {
+    width: 120px;
+  }
+  .carousel__title {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
